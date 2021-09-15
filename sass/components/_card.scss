@@ -17,7 +17,6 @@
 
     &__heading { 
         font-size: 2.8rem; font-weight: 300; text-transform: uppercase; color: $color-white; position: absolute; top: 12rem; right: 2rem; text-align: right; width: 75%;
-        
     }
 
     &__heading-span {
@@ -29,7 +28,7 @@
     // front side styling
     // source of pictures: unsplash.com
     &__picture { 
-        background-size: cover; height: 23rem; background-blend-mode: screen;
+        background-size: cover; height: 23rem; background-blend-mode: screen; border-top-left-radius: 3px; border-top-right-radius: 3px;
         
         &--1 { background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg); -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
         &--2 { background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../img/nat-6.jpg); -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
