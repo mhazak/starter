@@ -1,7 +1,24 @@
 .section-about { background-color: $color-grey-light-1; padding: 25rem 0; margin-top: -20vh; }
 .section-features { 
-    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url('../img/nat-4.jpg'); background-size: cover; padding: 20rem 0; transform: skewY(-7deg); margin-top: -10rem;
-    & > * { transform: skewY(7deg); }
+	background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url('../img/nat-4.jpg'); background-size: cover; padding: 20rem 0; transform: skewY(-7deg); margin-top: -10rem;
+	& > * { transform: skewY(7deg); }
 }
 .section-tours { background-color: $color-grey-light-1; padding: 25rem 0 15rem 0; margin-top: -10rem; }
 .section-stories { background-color: $color-grey-light-1; padding: 15rem 0; position: relative; }
+.section-book { padding: 15rem 0; background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark); }
+.book { 
+	// degrees will make shape (e.g. 105 makes shape "| / |".. 90 will look like this "| | |"... 45 like this "| \ |"
+	// first parameter will set starting point of color white
+	// second parameter ending point of color white (if there is just one parameter (0%) it will be not visible
+	// third parameter where orangered starts
+	// if the number of ending white (50%) and starting different color (50%) is same - there will be no linear gradient.
+	// if numbers will be 40% and 50%, gradient of color will be from these positions.
+	background-image: linear-gradient(105deg,
+					rgba($color-white, .9), 0%,
+					rgba($color-white, .9), 50%, 
+					transparent 50%,
+					), url(../img/nat-10.jpg); 
+	background-size: 100%; height: 50rem; border-radius: $border-radius; box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
+	&__form { width: 50%; padding: 6rem; }
+}
