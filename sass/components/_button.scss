@@ -1,9 +1,11 @@
 .btn {
+	&,
 	&:link, 
-	&:visited { position: relative; text-transform: uppercase; text-decoration: none; padding: 1.5rem 4rem; display: inline-block; border-radius: 10rem; transition: all .2s; }
+	&:visited { position: relative; text-transform: uppercase; text-decoration: none; padding: 1.5rem 4rem; display: inline-block; border-radius: 10rem; transition: all .2s;  border: none; cursor: pointer; }
 	
-	&:hover { 
-		transform: translateY(-0.3rem); box-shadow: 0 1rem 2rem rgba($color-black, .2); 
+	&:hover,
+	&:active { 
+		outline: none; transform: translateY(-0.3rem); box-shadow: 0 1rem 2rem rgba($color-black, .2); 
 		&::after { transform: scaleX(1.4) scaleY(1.6); opacity: 0; }
 	}
 
