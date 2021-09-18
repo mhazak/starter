@@ -1,3 +1,7 @@
 @mixin clearfix { 
     &::after { content: ""; clear: both; display: table; }
 }
+
+@mixin center_horizontal {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
