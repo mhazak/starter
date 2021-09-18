@@ -1,0 +1,19 @@
+.form {
+    &__group:not(:last-child) { margin-bottom: 2rem; }
+    &__input { 
+        
+        // border-bottom transparent is used to input have fixed height (e.g. input will be focused, where have colorful border-bottom and gains 3px, so elements under will move
+        // by this we will fix this problem
+        color: inherit; font-size: 1.5rem; padding: 1.5rem 2rem; border-radius: 2px; background-color: rgba($color-white, .5); border: none; font-family: inherit; border-bottom: 3px solid transparent; display: block; width: 90%; transition: all .3s;
+        
+        &::-webkit-input-placeholder { color: $color-grey-dark-2; }
+        &:focus { outline: none; box-shadow: 0 1rem 2rem rgba($color-black, .1); border-bottom: 3px solid $color-primary; }
+
+        &:focus:invalid { border-bottom: 3px solid $color-secondary-dark; }
+    }
+
+    &__label { font-size: 1.2rem; font-weight: 700; margin-left: 2rem; margin-top: .7rem; display: block; transition: all .3s; }
+
+    // sibling selector (same child of form element) works just in this order (first element + sibling right next to him)
+    &__input:placeholder-shown + &__label { opacity: 0; visibility: hidden; transform: translateY(-4rem) }
+}
