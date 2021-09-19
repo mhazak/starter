@@ -1,15 +1,38 @@
 .row {
+	
 	max-width: $grid-width; margin: 0 auto;
 
 	&:not(:last-child) {
+		
 		margin-bottom: $gutter-vertical;
+
+		// media query
+		@include respond(tab-port) { margin-bottom: $gutter-vertical-small; }
+
 	}
+
+	// query for .row
+	@include respond(tab-port) {
+		max-width: 50rem; padding: 0 3rem;
+	}
+
 	@include clearfix;
 
 	[class^="col-"] {
+		
 		float: left;
 
-		&:not(:last-child) { margin-right: $gutter-horizontal; }
+		&:not(:last-child) { 
+			margin-right: $gutter-horizontal; 
+			
+			// media query
+			@include respond(tab-port) { margin-right: 0; margin-bottom: $gutter-horizontal-small; }
+		
+		}
+
+		// media query .col-
+		@include respond(tab-port) { width: 100% !important;}
+
 	}
 	
 	.col-1-of-2 { width: calc((100% - #{$gutter-horizontal}) / 2); }
