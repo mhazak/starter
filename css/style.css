@@ -1,3 +1,35 @@
+/*
+	media query 
+
+	0		-	600px   -> phone
+	600		-	900px   -> tablet portrait
+	900		-	1200px	-> tablet landscape
+	1200	-	1800px	-> default (desktop)
+	1800+				-> big desktop		
+
+
+	by creating a mixin we can use this mixin in whole code without defining max/min-width. It is all defined in one place.
+
+	e.g. here we can define 
+	
+	@mixin respond-phone {
+		@media (max-width: 600px) { @content };
+	}
+
+	and in some css element we will just import this mixin.
+
+	e.g.
+
+	.fokume {
+		background-color: black;
+		@import respond-phone { background-color: white; }
+	}
+
+	so basically when the resolution of screen will have width up to 600px, background will be white,
+	if resolution will be higher, background will be white. (background-color: white; will be implement into mixin
+	instead of @content)
+
+*/
 @keyframes move_in_left {
   0% {
     opacity: 0;
@@ -33,6 +65,9 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box; }

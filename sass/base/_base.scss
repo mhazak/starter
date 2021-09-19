@@ -1,3 +1,13 @@
 *, *::after, *::before { margin: 0; padding: 0; box-sizing: inherit; }
-html { font-size: 62.5%; } // defines 1 rem
+
+html { 
+
+    // defines 1 rem
+    font-size: 62.5%;
+
+    // MEDIA QUERY
+    @include respond-phone { font-size: 50%; }
+
+} 
+
 body { box-sizing: border-box; }
