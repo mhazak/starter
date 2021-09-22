@@ -54,7 +54,9 @@
 	&__price-value { font-size: 6rem; font-weight: 100; }
 
 	// query
-	@include respond(tab-port) {
+	// it will be applied also for touch devices (as tablest and phones)
+	@media 	only screen and (max-width: 56.25em),
+			only screen and (hover: none) {
 
 		height: auto; border-radius: $border-radius; box-shadow: 0 1.5rem 4rem rgba($color-black, .15); background-color: $color-white;
 
